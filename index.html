@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfterLife</title>
+    <link rel="icon" href="graph.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <!-- HTML -->
+    <div class="grid" id="gridContainer"></div>
+
+    <div class="pop-up" id="gamePopup">
+      
+      <div>
+        <h3>Instructions</h3>
+        <p>• Click grid cells to toggle between live and dead cell</p>
+        <p>• Use the clear button to reset population setup</p>
+        <p>• Click the "Simulate" button to play</p>
+      </div>
+
+      <div class="instruction">
+        <h3>How does it work?</h3>
+        <p>Each colored cell represent live cell</p>
+        <p>Any live cell with fewer than 2 live neighbors dies due to underpopulation</p>
+        <p>Any live cell with 2 or 3 live neighbors lives on to the next generation</p>
+        <p>Any live cell with more than 3 live neighbors dies due to overpopulation</p>
+        <p>Any dead cell with exactly 3 live neighbors becomes a live cell, as if by reproduction</p>
+      </div>
+
+      <div class="operation">
+        <button>Clear Grid</button>
+        <button>Simulate</button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
